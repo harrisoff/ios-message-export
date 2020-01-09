@@ -1,0 +1,31 @@
+{
+  "name": "ios-message-export",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "node dist/index.js",
+    "dev": "tsc -w -p .",
+    "build": "tsc -p ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/lodash": "^4.14.149",
+    "@types/sqlite3": "^3.1.5",
+    "moment": "^2.24.0",
+    "sqlite3": "^4.1.0",
+    "typescript": "^3.7.2",
+    "xlsx": "^0.15.2"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^2.9.0",
+    "@typescript-eslint/parser": "^2.9.0",
+    "eslint": "^6.7.1",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-config-prettier": "^6.7.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-prettier": "^3.1.1",
+    "prettier": "^1.19.1"
+  }
+}
