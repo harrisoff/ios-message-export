@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "start": "node dist/index.js",
+    "start": "npm run build&&node dist/index.js",
     "dev": "tsc -w -p .",
     "build": "tsc -p .",
     "compile": "npm run build&&node compile/index.js"
