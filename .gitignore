@@ -3,7 +3,17 @@
 .DS_Store
 
 /node_modules
-/dataset/*
-/output/*
+/dataset
+/output
+/dist
+
+3d0d7e5fb2ce288813306e4d4636395e047a3d28
+3d0d7e5fb2ce288813306e4d4636395e047a3d28-wal
+3d0d7e5fb2ce288813306e4d4636395e047a3d28-shm
+31bb7ba8914766d4ba40d6dfb6113c8b614be442
+31bb7ba8914766d4ba40d6dfb6113c8b614be442-wal
+31bb7ba8914766d4ba40d6dfb6113c8b614be442-shm
+ios-message-export.exe
+ios-message-export.csv
 
 !.gitkeep
