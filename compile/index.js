@@ -7,12 +7,8 @@ const projectName = JSON.parse(packageJson).name;
 
 nexe.compile(
   {
-    flags: true,
     input: path.resolve(__dirname, '../dist/index.js'),
     output: path.resolve(__dirname, `../${projectName}`),
-    nodeTempDir: 'nexe_node',
-    framework: 'node',
-    resourceFiles: [],
   },
   error => {
     if (error) {
