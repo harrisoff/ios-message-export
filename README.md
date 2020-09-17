@@ -67,6 +67,7 @@
 | - | - | - |
 | iPhone 6s Plus iOS 12 | ✔️ | |
 | iPhone 6s Plus iOS 13 | ✔️ | |
+| iPhone 11 iOS 13.7 | ✔️ | |
 
 设备有限，欢迎测试后提 PR。
 
