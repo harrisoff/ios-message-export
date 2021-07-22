@@ -19,7 +19,7 @@
     "nexe": "^3.3.2",
     "sqlite3": "^4.1.0",
     "typescript": "^3.7.2",
-    "xlsx": "^0.15.2"
+    "xlsx": "^0.17.0"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^2.9.0",
