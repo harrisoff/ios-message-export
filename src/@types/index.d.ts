@@ -14,7 +14,7 @@ interface Message {
   appleId: string;
   time: number | string;
   readTime: number | string;
-  fromMe: string;
+  fromMe: 1 | 0;
   // getTelAndNameByHandleId()
   tel?: string;
   fullName?: string;
@@ -43,7 +43,7 @@ interface Result {
   appleId: string;
   time: number | string;
   readTime: number | string;
-  fromMe: string;
+  fromMe: 1 | 0;
   tel?: string;
   fullName?: string;
 }

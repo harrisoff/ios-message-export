@@ -107,7 +107,7 @@ export function getAllMessages(smsDB: sqlite3.Database): Promise<Message[]> {
             appleId: account_guid,
             time: formatTimestamp(formatSwiftTime(date)),
             readTime: formatTimestamp(formatSwiftTime(date_read)),
-            fromMe: is_from_me === 0 ? '接收' : '发送',
+            fromMe: is_from_me,
           };
         });
         resolve(formattedResult);

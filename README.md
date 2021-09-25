@@ -1,77 +1,62 @@
 # ios-message-export
 
-## 功能
+[中文文档](./README.zh.md)
 
-提取并整合 iOS 备份文件中的联系人和短信数据，导出为 CSV 文档。
+Extract contacts and messages from iTunes backup files and aggregate them into a csv file.
 
-包含以下数据：
-- 短信 ID
-- 接收到该短信时手机上登录的 Apple 账户的 ID
-   > 不是 Apple 账户的邮箱地址，是 ID
-- 文本内容
-- 对方号码
-- 对方姓名（如果对方号码保存到了通讯录）
-- 收信号码（本机号码）
-- 短信时间
-- 短信已读时间
-- 发送还是接收
+Data structure:
 
-## 使用方法
+```ts
+interface Result {
+  id: string;
+  text: string;
+  myTel: string;
+  // apple id of the phone when receiving this message
+  appleId: string;
+  time: number | string;
+  readTime: number | string;
+  fromMe: 1 | 0;
+  tel?: string;
+  // sender's name (if the tel is saved)
+  fullName?: string;
+}
+```
 
-## 1. 备份手机数据
+## Usage
 
-1.1. 使用 iTunes 备份手机数据到 PC/Mac
+## 1. backup
 
-   **提示给备份加密时一定不要设置密码**
+   1. backup your iphone with iTunes
 
-1.2. 备份完成后，从备份目录找到以下两个文件备用：
+      **DO NOT SET PASSWORD**
 
-   - `3d0d7e5fb2ce288813306e4d4636395e047a3d28`
-   - `31bb7ba8914766d4ba40d6dfb6113c8b614be442`
+   2. find those two files from backup files, we'll use it later:
 
-## 2. 提取
+      - `3d0d7e5fb2ce288813306e4d4636395e047a3d28`
+      - `31bb7ba8914766d4ba40d6dfb6113c8b614be442`
 
-两种方式都可以：
-- 直接使用编译后的可执行文件
-   > 暂时只有 Windows 版本
-- 运行源码
+## 2. extract
 
-### 运行可执行文件
+   1. clone project
 
-下载 [release](https://github.com/harrisoff/ios-message-export/releases) 中的可执行文件，放到与步骤 `1.2.` 中的两个文件相同的目录后运行。
+   2. install dependencies `npm i`
 
-结果将输出为同目录下的 `ios-message-export.csv` 文件。
+   3. put two files above to project root folder
 
-### 运行源码
+   4. `npm start`, then the data will be exported to `ios-message-export.csv`
 
-1. `clone` 项目
-
-2. 安装依赖
-
-   ```shell
-   npm i
-   ```
-3. 复制备份数据
-
-   把步骤 `1.2.` 中的两个文件复制到项目根目录
-
-4. 运行
-
-   执行 `npm run start`，结果将输出为项目根目录下的 `ios-message-export.csv` 文件。
-
-## 兼容性
-
-支持的 iPhone 型号、iOS 版本及执行备份的系统见下表。
+## Compatibility
 
 | | Windows 10 | MacOS |
 | - | - | - |
 | iPhone 6s Plus iOS 12 | ✔️ | |
 | iPhone 6s Plus iOS 13 | ✔️ | |
 | iPhone 11 iOS 13.7 | ✔️ | |
+| iPhone 11 iOS 14 | ✔️ | |
 
-设备有限，欢迎测试后提 PR。
+I only tested it with my own devices, welcome to create PRs with your test result.
 
-## 参考链接
+## References
 
 - [iPhone backup database hashes: which filenames do they use?](https://www.iphonebackupextractor.com/blog/iphone-backup-location-all-files-extension/)
 - [Messages - The iPhone Wiki](https://www.theiphonewiki.com/wiki/Messages#message)
