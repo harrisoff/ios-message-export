@@ -51,6 +51,7 @@ interface Result {
 | - | - | - |
 | iPhone 6s Plus iOS 12 | ✔️ | |
 | iPhone 6s Plus iOS 13 | ✔️ | |
+| iPhone XS iOS 14 | | ✔️ |
 | iPhone 11 iOS 13.7 | ✔️ | |
 | iPhone 11 iOS 14 | ✔️ | |
 
