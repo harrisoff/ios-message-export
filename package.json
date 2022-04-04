@@ -3,25 +3,28 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "start": "npm run build&&node dist/index.js",
+    "start": "npm run build&&node dist/cli/index.js",
     "dev": "tsc -w -p .",
-    "build": "tsc -p .",
-    "compile": "npm run build&&node compile/index.js"
+    "build": "tsc -p ."
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "iOS",
+    "iTunes",
+    "iPhone",
+    "SMS",
+    "iMessage"
+  ],
+  "author": "harrisoff",
   "license": "ISC",
   "dependencies": {
-    "@types/lodash": "^4.14.149",
-    "@types/sqlite3": "^3.1.5",
-    "lodash": "^4.17.21",
-    "moment": "^2.24.0",
-    "nexe": "^3.3.2",
+    "commander": "^9.1.0",
+    "dayjs": "^1.11.0",
     "sqlite3": "^4.1.0",
-    "typescript": "^3.7.2",
     "xlsx": "^0.17.0"
   },
   "devDependencies": {
+    "@types/node": "^17.0.23",
+    "@types/sqlite3": "^3.1.5",
     "@typescript-eslint/eslint-plugin": "^2.9.0",
     "@typescript-eslint/parser": "^2.9.0",
     "eslint": "^6.7.1",
@@ -29,6 +32,7 @@
     "eslint-config-prettier": "^6.7.0",
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-prettier": "^3.1.1",
-    "prettier": "^1.19.1"
+    "prettier": "^1.19.1",
+    "typescript": "^3.7.2"
   }
 }

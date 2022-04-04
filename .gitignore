@@ -13,7 +13,11 @@
 31bb7ba8914766d4ba40d6dfb6113c8b614be442
 31bb7ba8914766d4ba40d6dfb6113c8b614be442-wal
 31bb7ba8914766d4ba40d6dfb6113c8b614be442-shm
-ios-message-export.exe
-ios-message-export.csv
+message.csv
+message.json
+person.csv
+person.json
+aggregated.csv
+aggregated.json
 
 !.gitkeep

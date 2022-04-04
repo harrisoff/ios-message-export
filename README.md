@@ -1,49 +1,27 @@
 # ios-message-export
 
-[中文文档](./README.zh.md)
-
 Extract contacts and messages from iTunes backup files and aggregate them into a csv file.
 
-Data structure:
-
-```ts
-interface Result {
-  id: string;
-  text: string;
-  myTel: string;
-  // apple id of the phone when receiving this message
-  appleId: string;
-  time: number | string;
-  readTime: number | string;
-  fromMe: 1 | 0;
-  tel?: string;
-  // sender's name (if the tel is saved)
-  fullName?: string;
-}
-```
+[中文文档](./README.zh.md)
 
 ## Usage
 
-## 1. backup
+1. clone project and install dependencies
 
-   1. backup your iphone with iTunes
+2. backup your iPhone with iTunes, **DO NOT SET PASSWORD**
 
-      **DO NOT SET PASSWORD**
+3. find those two files from backup folder, put them in the root directory of the project then run `npm run start`:
 
-   2. find those two files from backup files, we'll use it later:
+   - 3d0d7e5fb2ce288813306e4d4636395e047a3d28
+   - 31bb7ba8914766d4ba40d6dfb6113c8b614be442
 
-      - `3d0d7e5fb2ce288813306e4d4636395e047a3d28`
-      - `31bb7ba8914766d4ba40d6dfb6113c8b614be442`
+Results will be saved in the root directory of the project:
 
-## 2. extract
+- `message.csv`, original message data
+- `person.csv`, original contact data
+- `aggregated.csv`, add contact info for each message (if there is such a contact)
 
-   1. clone project
-
-   2. install dependencies `npm i`
-
-   3. put two files above to project root folder
-
-   4. `npm start`, then the data will be exported to `ios-message-export.csv`
+Passing `--format=json` to get results in json format.
 
 ## Compatibility
 
