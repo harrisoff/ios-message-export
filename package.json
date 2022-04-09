@@ -15,7 +15,7 @@
     "@types/lodash": "^4.14.149",
     "@types/sqlite3": "^3.1.5",
     "lodash": "^4.17.21",
-    "moment": "^2.24.0",
+    "moment": "^2.29.2",
     "nexe": "^3.3.2",
     "sqlite3": "^4.1.0",
     "typescript": "^3.7.2",
