@@ -1,6 +1,6 @@
 # ios-message-export
 
-Extract contacts and messages from iTunes backup files and aggregate them into a csv file.
+Export contacts and messages from iTunes backup files as csv/json files.
 
 [中文文档](./README.zh.md)
 
@@ -10,7 +10,7 @@ Extract contacts and messages from iTunes backup files and aggregate them into a
 
 2. backup your iPhone with iTunes, **DO NOT SET PASSWORD**
 
-3. find those two files from backup folder, put them in the root directory of the project then run `npm run start`:
+3. find those two files from backup folder, put them in the root directory of the project then run `npm run cli`:
 
    - 3d0d7e5fb2ce288813306e4d4636395e047a3d28
    - 31bb7ba8914766d4ba40d6dfb6113c8b614be442

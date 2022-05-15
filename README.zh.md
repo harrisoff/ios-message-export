@@ -1,12 +1,12 @@
 # ios-message-export
 
-提取并整合 iOS 备份文件中的联系人和短信数据，导出为 CSV 文档。
+把 iTunes 备份文件中的短信和联系人导出为 csv/json 文件。
 
 ## 使用方法
 
 1. clone 项目，安装依赖
 2. 用 iTunes 备份 iPhone，**不要设置密码**
-3. 从备份的目录中找到以下两个文件，放到项目根目录，然后 `npm run start`
+3. 从备份的目录中找到以下两个文件，放到项目根目录，然后 `npm run cli`
    - 3d0d7e5fb2ce288813306e4d4636395e047a3d28
    - 31bb7ba8914766d4ba40d6dfb6113c8b614be442
 
@@ -14,6 +14,8 @@
 - `message.csv`，原始的信息数据
 - `person.csv`，原始的联系人数据
 - `aggregated.csv`，在每条信息上加了对应的联系人（如果有的话）
+
+后面加 `--format=json` 可以获得 json 格式的数据。
 
 ## 兼容性
 
