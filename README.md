@@ -33,8 +33,9 @@ Passing `--format=json` to get results in json format.
 | iPhone XR iOS 15.1 | | ✔️ |
 | iPhone 11 iOS 13.7 | ✔️ | |
 | iPhone 11 iOS 14 | ✔️ | |
+| iPhone 11 iOS 15 | ✔️ | |
 
-I only tested it with my own devices, welcome to create PRs with your test result.
+I only tested it with my own devices, welcome to create PRs with your test results.
 
 ## References
 
