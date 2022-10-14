@@ -2,47 +2,47 @@ type Handle = {
   /**
    * Message['handle_id']
    */
-  ROWID: string;
+  ROWID: string
   /**
    * Person['c16Phone'][number]
    */
-  id: string;
-  service: 'SMS' | 'iMessage';
-};
+  id: string
+  service: 'SMS' | 'iMessage'
+}
 
 type Person = {
-  c0First: string;
-  c1Last: string;
-  c2Middle: string;
+  c0First: string
+  c1Last: string
+  c2Middle: string | null
   /**
    * Handle['id'][]
    */
-  c16Phone: string[];
-};
+  c16Phone: string[] | undefined
+}
 
 type Message = {
   /**
    * id
    */
-  guid: string;
-  text: string;
+  guid: string
+  text: string
   /**
    * Handle['ROWID']
    */
-  handle_id: string;
+  handle_id: string
   /**
    * your phone number (or email address?).
    * it seems that accounts always start
    * with prefixes "e:"/"E:"/"p:"/"P:"
    */
-  account: string;
+  account: string | undefined
   /**
    * apple account
    */
-  account_guid: string;
-  date: string;
-  date_read: string;
-  is_from_me: boolean;
-};
+  account_guid: string
+  date: string
+  date_read: string
+  is_from_me: boolean
+}
 
-type Result = Omit<Message, 'handle_id'> & Omit<Person, 'c16Phone'>;
+type Result = Omit<Message, 'handle_id'> & Omit<Person, 'c16Phone' | 'c20URL'>

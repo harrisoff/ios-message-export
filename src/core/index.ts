@@ -26,7 +26,7 @@ export const exportAggregatedList = async (personDatabase: sqlite3.Database, mes
     const { handle_id } = message
     const handle = handleList.find(h => h.ROWID === handle_id)
     if (handle) {
-      const person = personList.find(p => p.c16Phone.includes(handle.id))
+      const person = personList.find(p => p.c16Phone?.includes(handle.id))
       if (person) {
         const { c16Phone, ...rest } = person
         return {
