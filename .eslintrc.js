@@ -1,27 +1,24 @@
 module.exports = {
   env: {
-    es6: true,
     node: true,
   },
   extends: [
-    "prettier/@typescript-eslint",
-    "plugin:prettier/recommended"
+    'eslint-config-airbnb-base',
+    'eslint-config-airbnb-typescript/base',
+    'eslint-config-prettier',
   ],
-  globals: {
-    Atomics: 'readonly',
-    SharedArrayBuffer: 'readonly',
-  },
-  parser: '@typescript-eslint/parser',
   parserOptions: {
-    ecmaVersion: 2018,
-    sourceType: "module",
-    ecmaFeatures: {
-      modules: true
-    }
+    project: './tsconfig.json',
   },
-  plugins: [
-    '@typescript-eslint',
-  ],
   rules: {
+    // 'consistent-return': 'warn',
+    'import/extensions': 'off',
+    // 'import/no-extraneous-dependencies': 'off',
+    'import/prefer-default-export': 'off',
+    'no-console': 'warn',
+    // 'no-nested-ternary': 'off',
+    // 'no-underscore-dangle': 'off',
+
+    '@typescript-eslint/naming-convention': 'off',
   },
 };
